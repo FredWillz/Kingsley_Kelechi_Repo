@@ -1,0 +1,7 @@
+This is React project. Prioritize component architecture, SEO, reusability, and long-term maintainability over speed of output.
+Structure: Shared UI lives in components/ui/ (Button, Input, Heading, Text, etc.) Feature-specific components live in components. And no ad hoc styling inline.
+Styling: Tailwind CSS only, no inline styles or separate CSS modules. Design tokens (colors, spacing, font families, animation keyframes) are defined once as CSS variables in index.css  Components reference Tailwind utility classes tied to those tokens (e.g. bg-primary, animate-fade-in) never raw hex values or one-off animation definitions.
+SEO: Use semantic HTML, one h1 per page with a logical heading hierarchy, meaningful alt text, 
+Typography: Three fonts  heading, body, mono, exposed as CSS variables and mapped to Tailwind's fontFamily (font-heading, font-body, font-mono). No raw font-family declarations or Google Fonts <link> tags anywhere in the codebase.
+Accessibility: All interactive shared components (Button, Input, etc.) must have correct ARIA attributes, visible focus states, and keyboard navigability by default.
+Code quality: Follow existing ESLint. No duplicate implementations of a component that already exists in components/ui/ search before creating.

@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+:root {
+  /* Raw palette */
+  --color-red: #DB0011;
+  --color-black-deep: #050505;
+  --color-black-light: #333333;
+  --color-white: #F3F3F3;
+  --color-white-pure: #FFFFFF;
+
+  /* Semantic tokens — reference these in components via Tailwind */
+  --color-primary: var(--color-red);
+  --color-background: var(--color-white-pure);
+  --color-surface: var(--color-white);
+  --color-text-primary: var(--color-black-deep);
+  --color-text-secondary: var(--color-black-light);
+  --color-text-on-primary: var(--color-white-pure);
+
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* react-toastify theming — mapped to the Verxio palette above */
+  --toastify-font-family: var(--font-body);
+  --toastify-toast-bd-radius: 10px;
+  --toastify-toast-background: var(--color-background);
+  --toastify-text-color-light: var(--color-text-primary);
+  --toastify-color-error: var(--color-primary);
+  --toastify-color-success: #16a34a;
+  --toastify-color-info: var(--color-text-primary);
+  --toastify-color-warning: #d97706;
+  --toastify-icon-color-error: var(--color-primary);
+  --toastify-icon-color-success: #16a34a;
+  --toastify-color-progress-error: var(--color-primary);
+  --toastify-color-progress-success: #16a34a;
+}
+
+.Toastify__toast {
+  font-family: var(--font-body);
+  box-shadow: 0 4px 16px rgba(5, 5, 5, 0.12);
+}
+
+.Toastify__toast-body {
+  font-size: 0.875rem;
+}
+
+/* Section entrance animation — triggered once per section via useScrollReveal */
+@keyframes scrollIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-in {
+    animation: none;
+  }
+}
