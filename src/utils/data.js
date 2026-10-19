@@ -4,6 +4,7 @@ import userimageIII from "../assets/demo_test_imageIII.jpeg";
 import userimageIV from "../assets/demo_test_imageIv.jpeg";
 import userimageV from "../assets/demo_test_imagev.jpeg";
 import userimageVI from "../assets/demo_test_imagevi.jpeg";
+import userimageVII from "../assets/demo_test_imagevii.jpeg";
 
 export const structuredUserData = [
   {
@@ -35,5 +36,10 @@ export const structuredUserData = [
     userEmail:"a.masri@masrigroup-jo.com",
     accountNumber: "8970082824",
     image: userimageVI,
+  },
+  {
+    userEmail:"fxboul@bluesargasum.com",
+    accountNumber: "8901000223",
+    image: userimageVII,
   },
 ];
